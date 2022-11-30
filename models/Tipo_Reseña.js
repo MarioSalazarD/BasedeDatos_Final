@@ -17,6 +17,9 @@ const Tipo_Reseña = sequelize.define('tipos_reseñas', {
     },
     descripcion: {
         type: DataTypes.STRING
+    },
+    idReseña: {
+        type: DataTypes.INTEGER
     }
 })
 
@@ -25,7 +28,7 @@ Reseña.hasMany(Tipo_Reseña,{
     sourceKey: 'id'
 })
 
-Tipo_Reseña.belongsTo(Usuario,{
+Tipo_Reseña.belongsTo(Reseña,{
     foreignKey: 'idReseña',
     targetId: 'id'
 })
