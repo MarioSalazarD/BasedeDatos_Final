@@ -14,3 +14,6 @@ const create = async (Reporte) => {
     }
 
 }
+const ReportesRepository = { create, findAll, findOne, update, remove }
+
+export default ReportesRepository

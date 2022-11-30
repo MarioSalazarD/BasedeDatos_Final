@@ -14,3 +14,7 @@ const create = async (Orden) => {
     }
 
 }
+
+const OrdenesRepository = { create, findAll, findOne, update, remove }
+
+export default OrdenesRepository

@@ -9,8 +9,10 @@ const create = async (Categoria) => {
 
     } catch(error) {
         console.error(error)
-
         return null;
     }
 
 }
+const CategoriasRepository = { create, findAll, findOne, update, remove }
+
+export default CategoriasRepository

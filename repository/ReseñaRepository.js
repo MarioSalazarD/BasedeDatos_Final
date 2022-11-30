@@ -14,3 +14,6 @@ const create = async (Reseña) => {
     }
 
 }
+const ReseñasRepository = { create, findAll, findOne, update, remove }
+
+export default ReseñasRepository

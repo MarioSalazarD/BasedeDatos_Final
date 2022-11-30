@@ -14,3 +14,6 @@ const create = async (Tipo_Reseña) => {
     }
 
 }
+const Tipos_ReseñasRepository = { create, findAll, findOne, update, remove }
+
+export default Tipos_ReseñasRepository

@@ -14,3 +14,6 @@ const create = async (Producto) => {
     }
 
 }
+const ProductosRepository = { create, findAll, findOne, update, remove }
+
+export default ProductosRepository

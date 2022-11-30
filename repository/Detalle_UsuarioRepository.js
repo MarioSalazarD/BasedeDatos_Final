@@ -14,3 +14,6 @@ const create = async (Detalle_Usuario) => {
     }
 
 }
+const Detalles_UsuariosRepository = { create, findAll, findOne, update, remove }
+
+export default Detalles_UsuariosRepository

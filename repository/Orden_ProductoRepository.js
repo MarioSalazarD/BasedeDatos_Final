@@ -14,3 +14,7 @@ const create = async (Detalle_Usuario) => {
     }
 
 }
+
+const Ordenes_ProductosRepository = { create, findAll, findOne, update, remove }
+
+export default Ordenes_ProductosRepository

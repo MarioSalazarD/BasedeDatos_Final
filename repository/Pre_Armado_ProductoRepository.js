@@ -14,3 +14,7 @@ const create = async (Pre_Armado_Producto) => {
     }
 
 }
+
+const Pre_Armados_ProductosRepository = { create, findAll, findOne, update, remove }
+
+export default Pre_Armados_ProductosRepository
