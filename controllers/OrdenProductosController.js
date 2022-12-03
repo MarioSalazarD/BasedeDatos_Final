@@ -9,9 +9,9 @@ const create = async (req,res) => {
 
 const findAll = async(req,res) => {
 
-    const usuarios = await Orden_ProductoRepository.findAll();
+    const ordenesproductos = await Orden_ProductoRepository.findAll();
 
-    return sendResponse(usuarios,res);
+    return sendResponse(ordenesproductos,res);
 }
 
 const findOne = async(req,res) => {

@@ -31,9 +31,9 @@ const remove = async(req,res) => {
 
     const id = req.params.id;
 
-    const detalle_usuario = await Detalle_UsuarioRepository.remove(id);
+    const reseña_usuario = await ReseñaRepository.remove(id);
 
-    return sendResponse(detalle_usuario,res);
+    return sendResponse(reseña_usuario,res);
 }
 
 const sendResponse = (result,res) => {
@@ -44,9 +44,9 @@ else
     return res.status(500).json({message: 'An error has ocurred.'})
 }
 
-const ReseñasController = { create, findAll, findOne, update, remove }
+const ReseñaController = { create, findAll, findOne, update, remove }
 
-export default ReseñasController
+export default ReseñaController
 
 
 
