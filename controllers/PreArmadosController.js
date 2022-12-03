@@ -9,9 +9,9 @@ const create = async (req,res) => {
 
 const findAll = async(req,res) => {
 
-    const usuarios = await Pre_ArmadoRepository.findAll();
+    const prearmados = await Pre_ArmadoRepository.findAll();
 
-    return sendResponse(usuarios,res);
+    return sendResponse(prearmados,res);
 }
 
 const findOne = async(req,res) => {
