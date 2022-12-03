@@ -5,10 +5,10 @@ const { create, findOne, findAll, remove, update } = ReporteController
 
 const router = express.Router();
 
-router.get("/", findAll);
-router.post("/", create);
-router.put("/",update);
-router.delete("/:id",remove);
-router.get("/:id",findOne);
+router.get("/reporte/get", findAll);
+router.post("/reporte/post", create);
+router.put("/reporte/put",update);
+router.delete("/reporte/delete:id",remove);
+router.get("/reporte/get:id",findOne);
 
 export default router;
