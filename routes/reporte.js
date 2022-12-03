@@ -11,4 +11,4 @@ router.put("/reporte/put",update);
 router.delete("/reporte/delete:id",remove);
 router.get("/reporte/get:id",findOne);
 
-export default router;
+export default router;s
