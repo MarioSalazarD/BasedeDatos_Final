@@ -18,13 +18,13 @@ const findOne = async(req,res) => {
     const id = req.params.id;
     const usuario = await UsuarioRepository.findOne(id);
 
-    return sendResponse(usuario,res);
+    return sendResponse(usuarios,res);
 }
 
 const update = async(req,res) => {
     const usuario = await UsuarioRepository.update(req.body);
 
-    return sendResponse(usuario,res);
+    return sendResponse(usuarios,res);
 }
 
 const remove = async(req,res) => {
@@ -44,6 +44,6 @@ else
     return res.status(500).json({message: 'An error has ocurred.'}) //error
 }
 
-const UsuarioController = { create, findAll, findOne, update, remove }
+const UsuariosController = { create, findAll, findOne, update, remove }
 
-export default UsuarioController
+export default UsuariosController

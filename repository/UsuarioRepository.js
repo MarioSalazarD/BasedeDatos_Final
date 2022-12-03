@@ -1,9 +1,9 @@
 import Usuario from '../models/Usuario.js'
 
-const create = async (Usuario) => {
+const create = async (usuario) => {
 
     try {
-        const newUsuario = await Usuario.create(Usuario);
+        const newUsuario = await Usuario.create(usuario);
             
         return newUsuario;
 
