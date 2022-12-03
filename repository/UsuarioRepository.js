@@ -1,4 +1,5 @@
 import Usuario from '../models/Usuario.js'
+import { Op } from "sequelize";
 
 const create = async (usuario) => {
 
@@ -24,13 +25,31 @@ const findAll = async() => {
     }
 
 }
+const login = async (correo, password) => {
 
-const findOne = async(id) => {
+    try {
+        return await Usuario.findAll({
+            where: {
+                [Op.and]: [
+                    { correo: correo },
+                    { password: password }
+                ]
+            }
+        });
+    } catch (error) {
+        console.error(error)
+        return null
+    }
+
+}
+
+const findOne = async(correo, password) => {
 
     try {
         return await Usuario.findOne({
             where: {
-                id
+                correo,
+                password
             }
         })
     } catch (error) {
@@ -76,6 +95,6 @@ const remove = async (id) => {
         return false;
     }
 }
-const UsuariosRepository = { create, findAll, findOne, update, remove }
+const UsuariosRepository = { create, findAll, findOne, update, remove, login }
 
 export default UsuariosRepository

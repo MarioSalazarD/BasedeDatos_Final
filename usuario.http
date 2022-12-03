@@ -23,3 +23,7 @@ Content-Type: application/json
     "descripcion": "aaaaaa"
 
 }
+###
+GET http://localhost:3001/usuario/usuarios/get/7
+###
+GET  http://localhost:3001/usuario/ola@ola.com/123333333

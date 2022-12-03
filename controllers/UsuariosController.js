@@ -14,11 +14,19 @@ const findAll = async(req,res) => {
     return sendResponse(usuarios,res);
 }
 
+
 const findOne = async(req,res) => {
-    const id = req.params.id;
-    const usuario = await UsuarioRepository.findOne(id);
+    const correo = req.params.correo;
+    const password = req.params.password;
+    const usuario = await UsuarioRepository.findOne(correo, password);
 
     return sendResponse(usuario,res);
+}
+
+const login = async (req, res) => {
+    const result = await UsuarioRepository.login(req.params.correo, req.params.password)
+
+    return sendResponse(result, res)
 }
 
 const update = async(req,res) => {
@@ -44,6 +52,6 @@ else
     return res.status(500).json({message: 'An error has ocurred.'}) //error
 }
 
-const UsuariosController = { create, findAll, findOne, update, remove }
+const UsuariosController = { create, findAll, findOne, update, remove, login}
 
 export default UsuariosController

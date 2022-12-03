@@ -5,6 +5,7 @@ import bodyParser from 'body-parser'
 import usuariosRoutes from './routes/usuarios.js'
 import detalles_usuariosRoutes from './routes/detalles_usuarios.js'
 import reporteRoutes from './routes/reporte.js'
+import Usuario from './models/Usuario.js';
 
 
 var app = express();
