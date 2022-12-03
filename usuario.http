@@ -1,0 +1,13 @@
+POST http://localhost:3001/usuario/usuarios/post
+Content-Type: application/json
+
+{
+    "nombre": "Mario",
+    "apellido": "salazar",
+    "correo": "ola@ola.com",
+    "password": "123333333"
+}
+####
+GET http://localhost:3001/usuario/usuarios/get
+###
+DELETE http://localhost:3001/usuario/usuarios/delete/3
