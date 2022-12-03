@@ -5,10 +5,10 @@ const { create, findOne, findAll, remove, update } = PreArmadoProductosControlle
 
 const router = express.Router();
 
-router.get("/", findAll);
-router.post("/", create);
-router.put("/",update);
-router.delete("/:id",remove);
-router.get("/:id",findOne);
+router.get("/PreArmadoProductos/get", findAll);
+router.post("/PreArmadoProductos/post", create);
+router.put("/PreArmadoProductos/put",update);
+router.delete("/PreArmadoProductos/delete:id",remove);
+router.get("/PreArmadoProductos/get:id",findOne);
 
 export default router;

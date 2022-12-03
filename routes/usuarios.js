@@ -5,10 +5,10 @@ const { create, findOne, findAll, remove, update } = UsuariosController
 
 const router = express.Router();
 
-router.get("/", findAll);
-router.post("/", create);
-router.put("/",update);
-router.delete("/:id",remove);
-router.get("/:id",findOne);
+router.get("/Usuarios/get", findAll);
+router.post("/Usuarios/post", create);
+router.put("/Usuarios/put",update);
+router.delete("/Usuarios/delete:id",remove);
+router.get("/Usuarios/get:id",findOne);
 
 export default router;

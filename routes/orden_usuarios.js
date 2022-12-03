@@ -5,10 +5,10 @@ const { create, findOne, findAll, remove, update } = OrdenesController
 
 const router = express.Router();
 
-router.get("/", findAll);
-router.post("/", create);
-router.put("/",update);
-router.delete("/:id",remove);
-router.get("/:id",findOne);
+router.get("/Ordenes/get", findAll);
+router.post("/Ordenes/post", create);
+router.put("/Ordenes/put",update);
+router.delete("/Ordenes/delete:id",remove);
+router.get("/Ordenes/get:id",findOne);
 
 export default router;
