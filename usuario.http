@@ -11,3 +11,15 @@ Content-Type: application/json
 GET http://localhost:3001/usuario/usuarios/get
 ###
 DELETE http://localhost:3001/usuario/usuarios/delete/3
+###
+POST http://localhost:3001/reporte/reporte/post
+Content-Type: application/json
+
+{
+    "correo": "ola@ola.com",
+    "name": "mario",
+    "telefono": "123456",
+    "asunto": "aaaaa",
+    "descripcion": "aaaaaa"
+
+}
