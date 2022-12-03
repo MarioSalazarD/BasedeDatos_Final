@@ -1,7 +1,6 @@
 {
   "name": "base-de-datos-api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,5 +22,14 @@
   "type": "module",
   "devDependencies": {
     "dotenv": "^16.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioSalazarD/BasedeDatos_Final.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MarioSalazarD/BasedeDatos_Final/issues"
+  },
+  "homepage": "https://github.com/MarioSalazarD/BasedeDatos_Final#readme",
+  "description": ""
 }
