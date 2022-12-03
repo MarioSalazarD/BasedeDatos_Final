@@ -1,5 +1,5 @@
 import UsuarioRepository from '../repository/UsuarioRepository.js'
-
+//El controlador interactua directamente con los request del usuario y maneja directamente con la ruta
 const create = async (req,res) => {
     
     const result = await UsuarioRepository.create(req.body);
@@ -39,9 +39,9 @@ const remove = async(req,res) => {
 const sendResponse = (result,res) => {
     
 if (result)
-    return res.status(200).json(result)
+    return res.status(200).json(result) //Correcto
 else
-    return res.status(500).json({message: 'An error has ocurred.'})
+    return res.status(500).json({message: 'An error has ocurred.'}) //error
 }
 
 const UsuarioController = { create, findAll, findOne, update, remove }

@@ -1,6 +1,6 @@
 import Orden_Producto from '../models/Orden_Producto.js'
 
-const create = async (Detalle_Usuario) => {
+const create = async (Orden_Producto) => {
 
     try {
         const newOrden_Producto = await Orden_Producto.create(Orden_Producto);
