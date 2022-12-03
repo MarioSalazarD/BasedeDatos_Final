@@ -1,9 +1,9 @@
 import Reporte from '../models/Reporte.js'
 
-const create = async (Reporte) => {
+const create = async (reporte) => {
 
     try {
-        const newReporte = await Reporte.create(Reporte);
+        const newReporte = await Reporte.create(reporte);
             
         return newReporte;
 

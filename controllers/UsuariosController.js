@@ -18,13 +18,13 @@ const findOne = async(req,res) => {
     const id = req.params.id;
     const usuario = await UsuarioRepository.findOne(id);
 
-    return sendResponse(usuarios,res);
+    return sendResponse(usuario,res);
 }
 
 const update = async(req,res) => {
     const usuario = await UsuarioRepository.update(req.body);
 
-    return sendResponse(usuarios,res);
+    return sendResponse(usuario,res);
 }
 
 const remove = async(req,res) => {

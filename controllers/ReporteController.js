@@ -1,4 +1,4 @@
-import ReporteRepository from '../repository/ReporteRepository'
+import ReporteRepository from '../repository/ReporteRepository.js'
 
 const create = async (req,res) => {
     
@@ -9,9 +9,9 @@ const create = async (req,res) => {
 
 const findAll = async(req,res) => {
 
-    const reporte = await ReporteRepository.findAll();
+    const reportes = await ReporteRepository.findAll();
 
-    return sendResponse(reporte,res);
+    return sendResponse(reportes,res);
 }
 
 const findOne = async(req,res) => {
