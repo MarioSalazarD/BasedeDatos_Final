@@ -1,4 +1,5 @@
 import Detalle_Usuario from '../models/Detalle_Usuario.js'
+import Usuario from '../models/Usuario.js';
 
 const create = async (Detalle_Usuario) => {
 
@@ -14,10 +15,23 @@ const create = async (Detalle_Usuario) => {
     }
 
 }
+
+const findAllWithUsuario = async() => {
+
+    try {
+        return await Detalle_Usuario.findAll( {include: Usuario });
+    } catch(error) {
+        console.error(error)
+        return null
+    }
+
+}
+
+
 const findAll = async() => {
 
     try {
-        return await Detalle_Usuario.findAll();
+        return await Detalle_Usuario.findAll( {include: Usuario });
     } catch(error) {
         console.error(error)
         return null
@@ -42,17 +56,17 @@ const findOne = async(id) => {
 
 const update = async(detalle_usuario) => {
     try {
-        const foundusuario = await Detalle_Usuario.findOne({
+        const founddetalle_usuario = await Detalle_Usuario.findOne({
             where: {
                 id: detalle_usuario.id
             }
         })
 
-        foundusuario.set(detalle_usuario);
+        founddetalle_usuario.set(detalle_usuario);
 
-        await foundusuario.save();
+        await founddetalle_usuario.save();
 
-        return foundusuario;
+        return founddetalle_usuario;
 
     } catch(error) {
         console.error(error)
@@ -76,6 +90,6 @@ const remove = async (id) => {
         return false;
     }
 }
-const Detalles_UsuariosRepository = { create, findAll, findOne, update, remove }
+const Detalles_UsuariosRepository = { create, findAll, findOne, update, remove, findAllWithUsuario}
 
 export default Detalles_UsuariosRepository
