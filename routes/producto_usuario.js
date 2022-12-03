@@ -1,7 +1,7 @@
 import express from 'express'
-import TipoReseñasController from '../controllers/TipoReseñasController.js'
+import ProductosController from '../controllers/ProductosController.js'
 
-const { create, findOne, findAll, remove, update } = TipoReseñasController
+const { create, findOne, findAll, remove, update } = ProductosController
 
 const router = express.Router();
 

@@ -1,7 +1,7 @@
 import express from 'express'
-import TipoReseñasController from '../controllers/TipoReseñasController.js'
+import PreArmadoProductosController from '../controllers/PreArmadoProductosController.js'
 
-const { create, findOne, findAll, remove, update } = TipoReseñasController
+const { create, findOne, findAll, remove, update } = PreArmadoProductosController
 
 const router = express.Router();
 
