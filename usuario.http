@@ -1,4 +1,4 @@
-POST http://localhost:3001/usuario/usuarios/post
+POST https://basededatosfinal-production.up.railway.app/USUARIO/usuarios/post
 Content-Type: application/json
 
 {
@@ -27,3 +27,11 @@ Content-Type: application/json
 GET http://localhost:3001/usuario/usuarios/get/7
 ###
 GET  http://localhost:3001/usuario/ola@ola.com/123333333
+###
+POST    http://localhost:3001/email/send
+Content-Type: application/json
+
+{
+    "email": "mario327sdf@gmail.com"
+
+}
